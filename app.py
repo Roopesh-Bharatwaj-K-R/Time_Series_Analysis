@@ -23,8 +23,9 @@ class Item(BaseModel):
     is_offer: bool = None
 
 @app.post("/uploadfile/")
-async def create_upload_file(file: UploadFile =File(...)):
 
+
+async def create_upload_file(file: UploadFile =File(...)):
 
     contents = await file.read()
     contents = str(contents, 'utf-8')
@@ -94,3 +95,11 @@ async def create_upload_file(file: UploadFile =File(...)):
 
 
 # pip install python-multipart
+# pip install uvicorn
+# pip install FastAPI
+# pip install scipy
+# pip install statsmodels
+# pip install pandas, matplotlib, ujson
+
+# uvicorn filename.py:app --reload
+# the file name has to be changed above
